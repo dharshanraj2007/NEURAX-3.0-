@@ -1,0 +1,30 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+
+# Datasets (large, regeneratable via ml/prepare_dataset.py - see README)
+data/raw/
+data/processed/
+
+# Training run artifacts (large, regeneratable via ml/train_detector.py / ml/calibrate.py)
+ml/runs/
+/runs/
+
+# Pretrained backbone checkpoint (auto-downloaded by ultralytics before training)
+yolov8n.pt
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env files that may hold secrets
+.env
+.env.local
