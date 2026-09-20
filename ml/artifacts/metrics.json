@@ -1,0 +1,126 @@
+{
+  "evaluated_on": "held_out_test_split",
+  "test_set_size": 1800,
+  "overall_accuracy": 0.9772222222222222,
+  "per_class": [
+    {
+      "class": "crack",
+      "precision": 0.9598930481283422,
+      "recall": 0.9972222222222222,
+      "f1": 0.9782016348773842,
+      "support": 360
+    },
+    {
+      "class": "hole",
+      "precision": 0.9889807162534435,
+      "recall": 0.9972222222222222,
+      "f1": 0.9930843706777317,
+      "support": 360
+    },
+    {
+      "class": "normal",
+      "precision": 0.975609756097561,
+      "recall": 1.0,
+      "f1": 0.9876543209876543,
+      "support": 360
+    },
+    {
+      "class": "rust",
+      "precision": 1.0,
+      "recall": 0.925,
+      "f1": 0.961038961038961,
+      "support": 360
+    },
+    {
+      "class": "scratch",
+      "precision": 0.96398891966759,
+      "recall": 0.9666666666666667,
+      "f1": 0.9653259361997226,
+      "support": 360
+    }
+  ],
+  "confusion_matrix": [
+    [
+      359,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      359,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      360,
+      0,
+      0
+    ],
+    [
+      3,
+      4,
+      7,
+      333,
+      13
+    ],
+    [
+      12,
+      0,
+      0,
+      0,
+      348
+    ]
+  ],
+  "confusion_matrix_labels": [
+    "crack",
+    "hole",
+    "normal",
+    "rust",
+    "scratch"
+  ],
+  "mean_confidence_on_test_set": 0.9589794575174649,
+  "training_history": [
+    {
+      "epoch": 1,
+      "train_loss": 0.8365506718272254,
+      "train_acc": 0.7813095238095238,
+      "val_acc": 0.8411111111111111
+    },
+    {
+      "epoch": 2,
+      "train_loss": 0.26349478304386137,
+      "train_acc": 0.9479761904761905,
+      "val_acc": 0.8983333333333333
+    },
+    {
+      "epoch": 3,
+      "train_loss": 0.11142231399104709,
+      "train_acc": 0.9805952380952381,
+      "val_acc": 0.98
+    },
+    {
+      "epoch": 4,
+      "train_loss": 0.06672651614461626,
+      "train_acc": 0.9889285714285714,
+      "val_acc": 0.9605555555555556
+    },
+    {
+      "epoch": 5,
+      "train_loss": 0.04715156868809745,
+      "train_acc": 0.9917857142857143,
+      "val_acc": 0.9822222222222222
+    }
+  ],
+  "best_val_accuracy": 0.9822222222222222,
+  "model_parameters": 246117,
+  "train_val_test_sizes": {
+    "train": 8400,
+    "val": 1800,
+    "test": 1800
+  }
+}
