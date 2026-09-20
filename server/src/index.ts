@@ -9,13 +9,13 @@ const upload = multer({ storage: multer.memoryStorage(), limits: { fileSize: 10 
 
 const app = express();
 
-// CORS_ORIGIN in .env can be one origin or a comma-separated list, for a
-// pinned production frontend. Leave it unset for local dev: Vite's dev
+// CORS_ORIGINS in .env can be one origin or a comma-separated list, for a
+// pinned production frontend.
 // server picks whatever port is free (5173, 5174, ...), so instead of
 // pinning to one we allow any localhost/127.0.0.1 origin. Requests with no
 // Origin header (curl, server-to-server, same-origin via the Vite proxy)
 // are always allowed.
-const configuredOrigins = process.env.CORS_ORIGIN?.split(",").map((o) => o.trim()).filter(Boolean);
+const configuredOrigins = process.env.CORS_ORIGINS?.split(",").map((o) => o.trim()).filter(Boolean);
 const isLocalDevOrigin = (origin: string) => /^https?:\/\/(localhost|127\.0\.0\.1):\d+$/.test(origin);
 
 app.use(
